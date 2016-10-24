@@ -1,7 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Http, Headers} from "@angular/http";
-import {Router} from "@angular/router";
-import {Event} from "../event";
 import {AuthService} from "./auth.service";
 
 import 'rxjs/add/operator/toPromise';
@@ -17,7 +15,6 @@ export class GetRecordsService {
 
     constructor(
         private _http: Http,
-        private _router: Router,
         private _auth: AuthService
     ) { }
 
@@ -29,7 +26,7 @@ export class GetRecordsService {
         return this._http
             .get(this.url + class_name + '.json', { headers: headers })
             .toPromise()
-            .then( res => res.json().items as Event[])
+            .then(res => res.json().items)
             .catch(this.handleError);
     }
 }

@@ -29,11 +29,10 @@ export class AuthService {
     constructor(
         private _http: Http,
         private _router: Router
-        // private _cookieService:CookieService
     ) { }
 
     public authenticated() {
-        return (this.getSessionToken() !== null);
+        return this.getSessionToken() ? true : false;
     }
 
     login(username: string, password: string): Promise<any> {

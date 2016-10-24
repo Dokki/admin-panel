@@ -1,8 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {GetRecordsService} from '../../services/get-records.servise';
 
-import {Speaker} from '../../speaker';
-
 @Component({
     selector: 'my-speaker',
     templateUrl: 'app/components/speaker/speaker.component.html',
@@ -10,7 +8,7 @@ import {Speaker} from '../../speaker';
 })
 export class SpeakerComponent implements OnInit {
     @Input()
-    speakers: Speaker[];
+    speakers: any[];
 
     constructor(private _getRecordsService:GetRecordsService) {
     }
@@ -23,8 +21,6 @@ export class SpeakerComponent implements OnInit {
         this._getRecordsService.getRecords(class_name)
             .then((res) => {
                 this.speakers = res;
-                console.log('speakers');
-                console.log(this.speakers);
             })
     }
 }

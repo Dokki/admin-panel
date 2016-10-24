@@ -21,6 +21,10 @@ const appRootes: Routes = [
         path: 'speaker',
         component: SpeakerComponent,
         canActivate: [AuthGuard]
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     }
 ];
 
