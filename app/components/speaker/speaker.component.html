@@ -1,0 +1,33 @@
+<div class="col-md-12 col-sm-12 col-xs-12">
+	<div class="x_panel" *ngIf="speakers">
+		<div class="x_title">
+			<h2>Default Example <small>Users</small></h2>
+			<div class="clearfix"></div>
+		</div>
+		<div class="x_content">
+			<table id="datatable" class="table table-striped table-bordered">
+				<thead>
+				<tr>
+					<th>FirstName</th>
+					<th>LastName</th>
+					<th>Bio</th>
+					<th>Birthday</th>
+					<th>Photo</th>
+				</tr>
+				</thead>
+
+
+				<tbody>
+				<tr *ngFor="let speaker of speakers">
+					<td>{{speaker.FirstName}}</td>
+					<td>{{speaker.LastName}}</td>
+					<td>{{speaker.Bio}}</td>
+					<td>{{speaker.Birthday}}</td>
+					<td>{{speaker.Photo}}</td>
+				</tr>
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

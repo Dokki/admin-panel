@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div id="navbar">
+			<ul class="nav navbar-nav" *ngIf='isLogin()'>
+				<li><a routerLink="/event">Event</a></li>
+				<li><a routerLink="/speaker">Speaker</a></li>
+				<span *ngIf="records">
+				<li *ngFor="let record of records.items">{{record.Title}}</li></span>
+				<li class="pull-right"><a href="#" (click)="_auth.logout()">Sign out</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<router-outlet></router-outlet>
+</div>
