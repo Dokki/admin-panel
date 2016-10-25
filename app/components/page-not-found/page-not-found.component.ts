@@ -1,19 +1,13 @@
 import {Component} from '@angular/core';
-import {AuthService} from "../../services/auth.service";
 
 @Component({
-    selector: 'login',
-    templateUrl: 'app/components/login/login.component.html',
-    styleUrls: ['app/components/login/login.component.css']
+    selector: 'page-not-found',
+    template: `
+<div class="error-template">
+        <h1>404</h1>
+        <p><strong>Sorry, an error has occured, Requested page not found!</strong></p>
+        </div>
+    `,
+    styles: ['.error-template {text-align: center;} h1 {padding: 40px 0 15px}']
 })
-export class LoginComponent {
-    constructor(private _auth: AuthService) { }
-
-    login(username: string, password: string): void {
-        username = 'test_admin';
-        password = 'password';//TODO: mock for quick dev
-
-        this._auth.login(username, password)
-            .then(() => {} );
-    }
-}
+export class PageNotFoundComponent { }

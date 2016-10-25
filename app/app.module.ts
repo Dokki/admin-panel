@@ -12,6 +12,7 @@ import {SpeakerComponent} from "./components/speaker/speaker.component";
 import {AuthService} from './services/auth.service';
 import {GetRecordsService} from './services/get-records.servise';
 import {AuthGuard} from './auth.guard';
+import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import {AuthGuard} from './auth.guard';
         AppComponent,
         LoginComponent,
         EventComponent,
-        SpeakerComponent
+        SpeakerComponent,
+        PageNotFoundComponent
     ],
     bootstrap: [
         AppComponent
@@ -36,7 +38,8 @@ import {AuthGuard} from './auth.guard';
         AuthGuard,
         LoginComponent,
         EventComponent,
-        SpeakerComponent
+        SpeakerComponent,
+        PageNotFoundComponent
     ]
 })
 export class AppModule { }

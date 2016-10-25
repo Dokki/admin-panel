@@ -6,6 +6,7 @@ import {EventComponent} from "./components/event/event.component";
 import {SpeakerComponent} from "./components/speaker/speaker.component";
 
 import {AuthGuard} from "./auth.guard";
+import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 
 const appRootes: Routes = [
     {
