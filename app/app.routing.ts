@@ -25,7 +25,8 @@ const appRootes: Routes = [
     {
         path: 'login',
         component: LoginComponent
-    }
+    },
+    { path: '**', component: PageNotFoundComponent }
 ];
 
 export const appRoutingProviders: any[] = [];

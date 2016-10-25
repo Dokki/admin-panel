@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 
 @Component({
@@ -8,7 +8,7 @@ import {AuthService} from "../../services/auth.service";
 })
 export class LoginComponent {
     constructor(private _auth: AuthService) { }
-    
+
     login(username: string, password: string): void {
         username = 'test_admin';
         password = 'password';//TODO: mock for quick dev
