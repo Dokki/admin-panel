@@ -15,32 +15,33 @@ import {AuthGuard} from './auth.guard';
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 
 @NgModule({
-    imports: [
-        BrowserModule,
-        routing,
-        FormsModule,
-        HttpModule
-    ],
-    declarations: [
-        AppComponent,
-        LoginComponent,
-        EventComponent,
-        SpeakerComponent,
-        PageNotFoundComponent
-    ],
-    bootstrap: [
-        AppComponent
-    ],
-    providers: [
-        appRoutingProviders,
-        AuthService,
-        GetRecordsService,
-        AuthGuard,
-        LoginComponent,
-        EventComponent,
-        SpeakerComponent,
-        PageNotFoundComponent
-    ]
+	imports: [
+		BrowserModule,
+		routing,
+		FormsModule,
+		HttpModule
+	],
+	declarations: [
+		AppComponent,
+		LoginComponent,
+		EventComponent,
+		SpeakerComponent,
+		PageNotFoundComponent
+	],
+	bootstrap: [
+		AppComponent
+	],
+	providers: [
+		appRoutingProviders,
+		AuthService,
+		GetRecordsService,
+		AuthGuard,
+		LoginComponent,
+		EventComponent,
+		SpeakerComponent,
+		PageNotFoundComponent
+	]
 })
-export class AppModule { }
+export class AppModule {
+}
 

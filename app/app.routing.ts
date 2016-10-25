@@ -8,28 +8,27 @@ import {SpeakerComponent} from "./components/speaker/speaker.component";
 import {AuthGuard} from "./auth.guard";
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
 
-const appRootes: Routes = [
-    {
-        path: '',
-        component: LoginComponent
-    },
-    {
-        path: 'event',
-        component: EventComponent,
-        canActivate: [AuthGuard]
-    },
-    {
-        path: 'speaker',
-        component: SpeakerComponent,
-        canActivate: [AuthGuard]
-    },
-    {
-        path: 'login',
-        component: LoginComponent
-    },
-    { path: '**', component: PageNotFoundComponent }
+const appRootes:Routes = [
+	{
+		path: '',
+		component: LoginComponent
+	},
+	{
+		path: 'event',
+		component: EventComponent,
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'speaker',
+		component: SpeakerComponent,
+		canActivate: [AuthGuard]
+	},
+	{
+		path: 'login',
+		component: LoginComponent
+	},
+	{path: '**', component: PageNotFoundComponent}
 ];
 
-export const appRoutingProviders: any[] = [];
-
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRootes);
+export const appRoutingProviders:any[] = [];
+export const routing:ModuleWithProviders = RouterModule.forRoot(appRootes);
