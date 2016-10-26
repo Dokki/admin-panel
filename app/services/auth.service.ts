@@ -38,26 +38,8 @@ export class AuthService {
 	}
 
 	logout() {
-		// if (!localStorage.getItem('session_token')) {
-		//     this._router.navigate(['/']);
-		//     return;
-		// }
-
-		let headers = new Headers({
-			'QuickBlox-REST-API-Version': '0.1.0',
-			'QB-Token': this.getSessionToken()
-		});
-
-		this.removeSessionToken(); //TODO: do true session
+		this.removeSessionToken();
 		this._router.navigate(['/']);
-		// return this._http
-		//     .delete(this.loginUrl, { headers: headers })
-		//     .toPromise()
-		//     .then(() => {
-		//         this.removeSessionToken();
-		//         this._router.navigate(['/']);
-		//     })
-		//     .catch(this.handleError);
 	}
 
 	createSession():Promise<any> {
