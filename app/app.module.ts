@@ -13,6 +13,7 @@ import {AuthService} from './services/auth.service';
 import {GetRecordsService} from './services/get-records.servise';
 import {AuthGuard} from './auth.guard';
 import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.component";
+import {LoaderComponent} from "./components/loader/loader.component";
 
 @NgModule({
 	imports: [
@@ -26,7 +27,8 @@ import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.
 		LoginComponent,
 		EventComponent,
 		SpeakerComponent,
-		PageNotFoundComponent
+		PageNotFoundComponent,
+		LoaderComponent
 	],
 	bootstrap: [
 		AppComponent
@@ -39,7 +41,8 @@ import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.
 		LoginComponent,
 		EventComponent,
 		SpeakerComponent,
-		PageNotFoundComponent
+		PageNotFoundComponent,
+		LoaderComponent
 	]
 })
 export class AppModule {

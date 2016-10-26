@@ -2,8 +2,8 @@ import {Injectable} from '@angular/core';
 import {Http, Headers} from "@angular/http";
 import {Router} from "@angular/router";
 
-var CryptoJS = require("node_modules/crypto-js/crypto-js.js");
-var CookiesService = require("app/services/cookies.service.js");
+var CryptoJS = require("../../node_modules/crypto-js/crypto-js.js");
+var CookiesService = require("./cookies.service.js");
 
 import 'rxjs/add/operator/toPromise';
 

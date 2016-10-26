@@ -8,4 +8,13 @@
 
 .nav li {
 	font-size: 18px;
+	float: left;
+}
+
+.container {
+	margin-top: 50px;
+}
+
+nav {
+	height: 50px;
 }
