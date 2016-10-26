@@ -18,3 +18,8 @@
 nav {
 	height: 50px;
 }
+
+.active {
+	color: #204277;
+	font-weight: bold;
+}

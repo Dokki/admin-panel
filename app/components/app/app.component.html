@@ -1,8 +1,8 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div id="navbar">
 		<ul class="nav" *ngIf='isLogin()'>
-			<li><a routerLink="/event">Event</a></li>
-			<li><a routerLink="/speaker">Speaker</a></li>
+			<li><a routerLink="/event" [routerLinkActive]="['active']">Event</a></li>
+			<li><a routerLink="/speaker" [routerLinkActive]="['active']">Speaker</a></li>
 			<span *ngIf="records">
 			<li *ngFor="let record of records.items">{{record.Title}}</li></span>
 			<li class="pull-right"><a href="#" (click)="_auth.logout()">Sign out</a></li>
